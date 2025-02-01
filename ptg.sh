@@ -20,7 +20,7 @@ if [ ! -d ".git" ]; then
     echo "Not a git repository. Initializing..."
     git init
     read -p "Enter the full GitHub repository URL (e.g., https://github.com/org/repo.git): " repo_url
-    git remote add origin "$repo_url"
+    git remote add orign "$repo_url"
 fi
 
 # Prompt for branch name (default: main)
@@ -42,7 +42,7 @@ echo "machine github.com login $USERN password $PASS" > ~/.netrc
 chmod 600 ~/.netrc  # Secure the credentials file
 
 # Push changes
-git push -u origin "$branch"
+git push -u orign "$branch"
 
 # Cleanup after pushing
 rm -f ~/.netrc
