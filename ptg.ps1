@@ -22,7 +22,7 @@ if (-Not (Test-Path .git)) {
     Write-Host "Not a git repository. Initializing..."
     git init
     $repo_url = Read-Host "Enter the full GitHub repository URL (e.g., https://github.com/org/repo.git)"
-    git remote add orign $repo_url
+    git remote add origin $repo_url
 }
 
 # Prompt for branch name (default: main)
